@@ -1,10 +1,3 @@
-/* document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('slide').forEach(slide => {
-        slide.style.display = 'none';
-    });
-    console.log('asdf');
-    document.querySelector('.active').style.display = 'block';
-}); */
 
 var slideActive;
 
@@ -137,7 +130,7 @@ function hideSlides(){
     document.querySelector('.slide.active').style.display = 'flex';
 }
 
-/* window.addEventListener('load', () => {
+window.addEventListener('load', () => {
     window.setTimeout(() => 
     {
         document.querySelector(".loader").classList.add('no-visible');
@@ -147,7 +140,7 @@ function hideSlides(){
         document.querySelector(".gradient.first").classList.remove('active');
         document.querySelector(".gradient.second").classList.add('active');
     }, 2000);
-}); */
+});
 
 /* CODIGO PRUEBA SWIPE */
 
@@ -211,29 +204,6 @@ close.addEventListener('click', (e) => {
         left: -100%;
     `
 });
-
-
-
-/* ENVIO DE CORREO */
-/* const buttonMsg = document.getElementById('enviarMsg');
-buttonMsg.addEventListener('click', (e) => {
-    e.preventDefault();
-    const fullName = document.getElementById('fullName').value;
-    const asunto   = document.getElementById('asunto').value;
-    const email    = document.getElementById('email').value;
-    const msg      = document.getElementById('msg').value;
-
-    
-    Email.send({
-        SecureToken : "90153f0e-4c15-42e8-8d39-fe7412bd1f6f",
-        To : `${email}`,
-        From : "smtp.elasticemail.com",
-        Subject : `${asunto}`,
-        Body : `${msg}`
-    }).then(
-      message => alert(message)
-    );
-}) */
 
 const buttonMsg = document.getElementById('enviarMsg');
 buttonMsg.addEventListener('click', (e) => {
