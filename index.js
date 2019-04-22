@@ -1,4 +1,3 @@
-
 var slideActive;
 
 window.addEventListener('resize', appHeight);
@@ -7,6 +6,7 @@ function appHeight() {
     document.querySelectorAll('.slide').forEach(slide => {
         slide.style.height = `${window.innerHeight}px`;
     });
+    document.querySelector('.menu-context').style.height = `${window.innerHeight}px`
 }
 
 hideSlides();
@@ -227,19 +227,5 @@ buttonMsg.addEventListener('click', (e) => {
            alert('hubo algún error')
         });
     
-    /* Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "amayarivasc@gmail.com",
-        Password : "d5d9177f-eefc-4380-b004-89f15e5322f4",
-        To : 'amayarivasc@gmail.com',
-        From : 'subject@gmail.com',
-        Subject : `${asunto}`,
-        Body : `${msg}`
-    }).then(
-      message => alert(message)
-    ); */
+    
 })
-
-
-
-// 90153f0e-4c15-42e8-8d39-fe7412bd1f6f  - token
