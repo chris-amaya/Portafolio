@@ -194,7 +194,8 @@ menu.addEventListener('click', () => {
     document.querySelector('.menu-context').style = `
         animation-name: bringFromLeft;
         left: 0px;
-    `
+    `;
+    document.querySelector('.menu-context').style.height = `${window.innerHeight}px`
 });
 
 const close = document.getElementById('close');
@@ -202,7 +203,8 @@ close.addEventListener('click', (e) => {
     document.querySelector('.menu-context').style = `
         animation-name: hideToLeft;
         left: -100%;
-    `
+    `;
+    document.querySelector('.menu-context').style.height = `${window.innerHeight}px`   
 });
 
 const buttonMsg = document.getElementById('enviarMsg');
