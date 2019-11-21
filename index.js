@@ -28,6 +28,7 @@ particleground(document.getElementById('particles-foreground'), {
   proximity: 250, // How close two dots need to be before they join
   parallaxMultiplier: 10, // Lower the number is more extreme parallax
   particleRadius: 4, // Dot size
+  
 });
 
 particleground(document.getElementById('particles-background'), {
@@ -43,6 +44,120 @@ particleground(document.getElementById('particles-background'), {
   parallaxMultiplier: 20, // Lower the number is more extreme parallax
   particleRadius: 2, // Dot size
 });
+
+particleground(document.getElementById('particles-foreground-slide1'), {
+    dotColor: 'rgba(255, 255, 255, 1)',
+    lineColor: 'rgba(255, 255, 255, 0.05)',
+    minSpeedX: 0.3,
+    maxSpeedX: 0.6,
+    minSpeedY: 0.3,
+    maxSpeedY: 0.6,
+    density: 50000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 250, // How close two dots need to be before they join
+    parallaxMultiplier: 10, // Lower the number is more extreme parallax
+    particleRadius: 4, // Dot size
+  });
+  
+  particleground(document.getElementById('particles-background-slide1'), {
+    dotColor: 'rgba(255, 255, 255, 1)',
+    lineColor: 'rgba(255, 255, 255, 0.05)',
+    minSpeedX: 0.075,
+    maxSpeedX: 0.15,
+    minSpeedY: 0.075,
+    maxSpeedY: 0.15,
+    density: 30000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 20, // How close two dots need to be before they join
+    parallaxMultiplier: 20, // Lower the number is more extreme parallax
+    particleRadius: 2, // Dot size
+  });
+
+particleground(document.getElementById('particles-foreground-slide3'), {
+    dotColor: 'rgba(255, 255, 255, 1)',
+    lineColor: 'rgba(255, 255, 255, 0.1)',
+    minSpeedX: 0.3,
+    maxSpeedX: 0.6,
+    minSpeedY: 0.3,
+    maxSpeedY: 0.6,
+    density: 50000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 250, // How close two dots need to be before they join
+    parallaxMultiplier: 10, // Lower the number is more extreme parallax
+    particleRadius: 5, // Dot size
+    lineWidth: 5
+  });
+  
+  particleground(document.getElementById('particles-background-slide3'), {
+    // dotColor: 'rgba(0,0,0,1)',
+    // lineColor: 'rgba(0,0,0,.1)',
+    dotColor: 'rgba(255, 255, 255, 1)',
+    lineColor: 'rgba(255, 255, 255, 0.05)',
+    minSpeedX: 0.075,
+    maxSpeedX: 0.15,
+    minSpeedY: 0.075,
+    maxSpeedY: 0.15,
+    density: 30000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 20, // How close two dots need to be before they join
+    parallaxMultiplier: 20, // Lower the number is more extreme parallax
+    particleRadius: 3, // Dot size
+    // lineWidth: 
+  });
+particleground(document.getElementById('particles-foreground-slide2'), {
+    dotColor: 'rgba(255, 255, 255, 1)',
+    lineColor: 'rgba(255, 255, 255, 0.1)',
+    minSpeedX: 0.3,
+    maxSpeedX: 0.6,
+    minSpeedY: 0.3,
+    maxSpeedY: 0.6,
+    density: 50000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 250, // How close two dots need to be before they join
+    parallaxMultiplier: 10, // Lower the number is more extreme parallax
+    particleRadius: 5, // Dot size
+  });
+  
+  particleground(document.getElementById('particles-background-slide2'), {
+    dotColor: 'rgba(255, 255, 255, 0.5)',
+    lineColor: 'rgba(255, 255, 255, 0.05)',
+    minSpeedX: 0.075,
+    maxSpeedX: 0.15,
+    minSpeedY: 0.075,
+    maxSpeedY: 0.15,
+    density: 30000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 20, // How close two dots need to be before they join
+    parallaxMultiplier: 20, // Lower the number is more extreme parallax
+    particleRadius: 3, // Dot size
+  });
+particleground(document.getElementById('particles-foreground-slide4'), {
+    dotColor: 'rgba(255, 255, 255, 0.5)',
+    lineColor: 'rgba(255, 255, 255, 0.1)',
+    minSpeedX: 0.3,
+    maxSpeedX: 0.6,
+    minSpeedY: 0.3,
+    maxSpeedY: 0.6,
+    density: 50000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 250, // How close two dots need to be before they join
+    parallaxMultiplier: 10, // Lower the number is more extreme parallax
+    particleRadius: 5, // Dot size
+  });
+  
+  particleground(document.getElementById('particles-background-slide4'), {
+    dotColor: 'rgba(255, 255, 255, 0.5)',
+    lineColor: 'rgba(255, 255, 255, 0.05)',
+    minSpeedX: 0.075,
+    maxSpeedX: 0.15,
+    minSpeedY: 0.075,
+    maxSpeedY: 0.15,
+    density: 30000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 20, // How close two dots need to be before they join
+    parallaxMultiplier: 20, // Lower the number is more extreme parallax
+    particleRadius: 3, // Dot size
+  });
 
 
 var slideActive;
@@ -192,6 +307,8 @@ function appHeight() {
 
 function bringFromBottom(slideActive) {
     let nextSlide = slideActive.nextElementSibling.classList.contains('slide') ? slideActive.nextElementSibling : document.querySelectorAll('.slide')[0];
+    // ésta linea además de mostrar el siguiente slide evita que parpadeen los demás slide
+    nextSlide.style.display = 'flex';
     anime({
         targets: `#${slideActive.id}`,
         top: '-100%',
@@ -217,6 +334,7 @@ function bringFromBottom(slideActive) {
 
 function bringFromTop(slideActive) {
     let previusSlide = slideActive.previousElementSibling.classList.contains('slide') ? slideActive.previousElementSibling : document.querySelectorAll('.slide')[document.querySelectorAll('.slide').length - 1];
+    previusSlide.style.display = 'flex';
     anime({
         targets: `#${slideActive.id}`,
         top: '100%',
@@ -246,7 +364,7 @@ function putSlidesDown() {
            return; 
         }
         slide.style.top = '100%';
-        slide.style.display = 'flex'
+        // slide.style.display = 'flex'
     });
 }
 
@@ -256,7 +374,7 @@ function putSlidesTop() {
             return;
         }
         slide.style.top = '-100%';
-        slide.style.display = 'flex'
+        // slide.style.display = 'flex'
     });
 }
 
@@ -286,7 +404,7 @@ window.addEventListener('load', () => {
             }, 300)
         })
         // let 
-    }, 1000);
+    }, 2000);
 });
 
 
