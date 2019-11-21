@@ -596,6 +596,15 @@ ul.redes-sociales li a {
 }
 
 @media screen and (min-width: 0px) and (max-width: 450px) {
+
+    .presentation .title {
+        font-size: 1.5em;
+    }
+
+    .presentation .job {
+        font-size: 1em;
+    }
+
     .show-phone {
         display: block;
     }
