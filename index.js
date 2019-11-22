@@ -388,20 +388,20 @@ function hideSlides(){
 }
 
 window.addEventListener('load', () => {
-    // document.body.classList.remove('preload');
-    // let presentation = document.querySelector('.presentation div div');
+    document.body.classList.remove('preload');
+    let presentation = document.querySelector('.presentation div div');
 
-    // presentation.addEventListener('animationend', (e) => {
-    //     setTimeout(() => {
-    //         let loader = document.querySelector('.loader');
-    //         loader.classList.remove('text-focus-in');
-    //         loader.classList.add('text-blur-out');
-    //         loader.addEventListener('animationend', () => {
-    //             loader.style.display = 'none';
-    //         })
+    presentation.addEventListener('animationend', (e) => {
+        setTimeout(() => {
+            let loader = document.querySelector('.loader');
+            loader.classList.remove('text-focus-in');
+            loader.classList.add('text-blur-out');
+            loader.addEventListener('animationend', () => {
+                loader.style.display = 'none';
+            })
 
-    //     }, 2000)
-    // })
+        }, 2000)
+    })
 });
 
 
