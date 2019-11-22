@@ -20,13 +20,8 @@ body, html {
     --spotify-color: #60d862;
     --seccion-amarilla-color: #fed23d;
     --form-slide: #2c93e4;
-    /* --background-gradient: linear-gradient(270deg, #000000, #aa1414, #000000, #24428c); */
-    --background-gradient: linear-gradient(270deg, #ff686b, #ffbb67);
-    --background-size: 400% 400%;
-
-
-    /* background: linear-gradient(270deg, #ff686b, #ffbb67);
-background-size:  */
+    --background-gradient: linear-gradient(270deg, #5d228f, #ca225c, #0097b5);
+    --background-size: 600% 600%;
 }
 
 .contenedor {
@@ -37,7 +32,6 @@ background-size:  */
 
 header {
     padding: 20px 0;
-    /* border-bottom: 3px solid #000; */
     z-index: 500;
     position: absolute;
     top: 0;
@@ -249,13 +243,13 @@ body .vertical-centered-box {
 .presentation .title {
     font-weight: 800;
     color: transparent;
-    font-size: 4em;
+    font-size: 2.5em;
     margin: 0;
     background: var(--background-gradient);
     background-size: var(--background-size);
-    -webkit-animation: AnimationName 2s ease infinite;
--moz-animation: AnimationName 2s ease infinite;
-animation: AnimationName 2s ease infinite;
+    -webkit-animation: AnimationName 3S ease infinite;
+    -moz-animation: AnimationName 3S ease infinite;
+    animation: AnimationName 3S ease infinite;
     -webkit-background-clip: text;
     position:relative;
     text-align:center;
@@ -264,15 +258,15 @@ animation: AnimationName 2s ease infinite;
 .presentation .job {
     font-weight: 300;
     color: transparent;
-    font-size: 3em;
+    font-size: 2.1em;
     margin: 0;
     font-style: italic;
     background: var(--background-gradient);
     background-size: var(--background-size);
     
-    -webkit-animation: AnimationName 2s ease infinite;
-    -moz-animation: AnimationName 2s ease infinite;
-    animation: AnimationName 2s ease infinite;
+    -webkit-animation: AnimationName 3S ease infinite;
+    -moz-animation: AnimationName 3S ease infinite;
+    animation: AnimationName 3S ease infinite;
     -webkit-background-clip: text;
     position:relative;
     text-align:center;

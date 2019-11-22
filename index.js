@@ -388,23 +388,20 @@ function hideSlides(){
 }
 
 window.addEventListener('load', () => {
-    window.setTimeout(() => 
-    {
-        document.body.classList.remove('preload');
-        let presentation = document.querySelector('.presentation div div');
-        presentation.addEventListener('animationend', (e) => {
-            setTimeout(() => {
-                let loader = document.querySelector('.loader');
-                loader.classList.remove('text-focus-in');
-                loader.classList.add('text-blur-out');
-                loader.addEventListener('animationend', () => {
-                    loader.style.display = 'none';
-                })
+    // document.body.classList.remove('preload');
+    // let presentation = document.querySelector('.presentation div div');
 
-            }, 300)
-        })
-        // let 
-    }, 2000);
+    // presentation.addEventListener('animationend', (e) => {
+    //     setTimeout(() => {
+    //         let loader = document.querySelector('.loader');
+    //         loader.classList.remove('text-focus-in');
+    //         loader.classList.add('text-blur-out');
+    //         loader.addEventListener('animationend', () => {
+    //             loader.style.display = 'none';
+    //         })
+
+    //     }, 2000)
+    // })
 });
 
 
