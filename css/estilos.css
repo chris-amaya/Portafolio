@@ -665,7 +665,13 @@ ul.redes-sociales li a {
 
 #slide2 .info a {
     background: #fff;
-    color: var(--spotify-color);
+    color: #000;
+}
+
+#slide2 .info a svg {
+    width: 20px;
+    margin-left: 5px;
+    color: #000;
 }
 
 #slide3 {
