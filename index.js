@@ -203,9 +203,9 @@ let CANIMOVE = true;
     EVENTOS 
    ================================================================*/
 
-   document.addEventListener('DOMContentLoaded', e => {
-    window.history.replaceState({}, document.title, `/portafolio`)
-   })
+//    document.addEventListener('DOMContentLoaded', e => {
+//     window.history.replaceState({}, document.title, `/portafolio`)
+//    })
 
 arrow.addEventListener('click', () => {
 
