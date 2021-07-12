@@ -49,6 +49,21 @@ header i {
     cursor: pointer;
 }
 
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.divider.divider-vertical {
+    width: 1px;
+    margin: 0 auto;
+    /* height: 100%; */
+    /* height: 30px; */
+    /* margin: auto; */
+    background-color: #fff;
+}
+
 @keyframes HideToTop {
     from { top: 0px }
     to { top: -100%;}
@@ -732,8 +747,27 @@ ul.redes-sociales li a {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 20%;
 }
+
+#slide4 .contenedor .info .content {
+    width: 100%;
+}
+
+#slide4 .contenedor .info .content div > * {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+#slide4 .contenedor .info .content .contact-info p > *:last-child {
+    margin-left: 20px;
+}
+
+
+/* #slide4 .contenedor .info .content div {
+
+} */
 
 #slide4 .contenedor h2 {
     text-align: center;
