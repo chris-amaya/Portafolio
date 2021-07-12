@@ -804,6 +804,10 @@ ul.redes-sociales li a {
     color: #000;
 }
 
+#slide6 {
+    background: rgb(177, 54, 30);
+}
+
 input#fullName, input#asunto {
     width: 40%;
     padding: 10px 0px;
