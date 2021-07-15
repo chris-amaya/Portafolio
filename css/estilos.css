@@ -24,6 +24,11 @@ body, html {
     --background-size: 600% 600%;
 }
 
+a {
+    text-decoration: none;
+    color: #fff
+}
+
 .contenedor {
     margin: 0 auto;
     width: 90%;
@@ -121,7 +126,8 @@ header i {
     font-weight: 100;
 }
 
-.slide .info a {
+.slide .info .muestra a,
+.slide .info .buttons-project a {
     background: #000;
     text-decoration: none;
     text-decoration-style: none;

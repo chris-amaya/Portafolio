@@ -108,27 +108,36 @@ close.addEventListener('click', (e) => {
     `;
 });
 
+const fullName = document.getElementById('fullName');
+const asunto   = document.getElementById('asunto');
+const email    = document.getElementById('email');
+const msg      = document.getElementById('msg');
+
 buttonMsg.addEventListener('click', (e) => {
     e.preventDefault();
-    const fullName = document.getElementById('fullName').value;
-    const asunto   = document.getElementById('asunto').value;
-    const email    = document.getElementById('email').value;
-    const msg      = document.getElementById('msg').value;
 
     var templateParams = {
-        "from_name":`${fullName}`,
-        "from_email":`${email}`,
-        "subject":`${asunto}`,
-        "message": `${msg}`
+        "from_name":`${fullName.value}`,
+        "from_email":`${email.value}`,
+        "subject":`${asunto.value}`,
+        "message": `${msg.value}`
     }
 
     emailjs
-        .send('gmail', 'portfolio', templateParams)
+        .send('service_wsemvm6', 'template_17pefez', templateParams)
         .then(
-            () => alert('mensaje enviado'), 
-            () => alert('hubo algún error')
+            () => messageSuccess(),
+            () => alert('hubo algún error al intentar enviar el correo')
         );
 })
+
+function messageSuccess() {
+    fullName.value = '';
+    asunto.value = '';
+    email.value = '';
+    msg.value = '';
+    alert('Mensaje enviado con éxito')
+}
 
 window.addEventListener('resize', appHeight);
 document.addEventListener('touchstart', handleTouchStart, false);        
